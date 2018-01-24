@@ -1,6 +1,13 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello World!');
-}).listen(8080);
+app.listen(80, function() {
+    console.log('Chatfuel Bot-Server listening on port 80...');
+});
+
+app.get('/*', function(req, res) {
+    var jsonResponse = [];
+    jsonResponse.push({ "text": "Hi. " + (Math.random() * 5 + 1).toFixed(0) + " is a lucky number..." });
+    res.send(jsonResponse);
+});
+
