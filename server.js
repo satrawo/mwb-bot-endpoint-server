@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
     res.json({ 
                 "set_attributes":
                 {
-                    "result": totalScore 
+                    "result": "3"
                 }
             });
     //res.send(jsonResponse);
