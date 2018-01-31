@@ -16,14 +16,14 @@ app.get('/', function(req, res) {
     var fifthScore = req.param('attribute5');
     //Total Score
 
-    var totalScore = 4;
-    // var totalScore = firstScore + secondScore + thridScore + fourthScore + fifthScore;
+
+    var totalScore = firstScore + secondScore + thridScore + fourthScore + fifthScore;
     
     // jsonResponse.push({ "text": "Hi. " + (Math.random() * 5 + 1).toFixed(0) + " is a lucky number..." });
     res.json({ 
                 "set_attributes":
                 {
-                    "result": totalScore
+                    "result": fifthScore
                 }
             });
     //res.send(jsonResponse);
