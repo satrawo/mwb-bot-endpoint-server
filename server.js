@@ -9,11 +9,11 @@ http.listen(process.env.PORT || 3000, function() {
 app.get('/', function(req, res) {
     var jsonResponse = [];
     var user_fb_id = req.param('fb_id');
-    var firstScore = req.param('attribute1');
-    var secondScore = req.param('attribute2');
-    var thridScore = req.param('attribute3');
-    var fourthScore = req.param('attribute4');
-    var fifthScore = req.param('attribute5');
+    var firstScore = parseInt(req.param('attribute1'));
+    var secondScore = parseInt(req.param('attribute2'));
+    var thridScore = parseInt(req.param('attribute3'));
+    var fourthScore = parseInt(req.param('attribute4'));
+    var fifthScore = parseInt(req.param('attribute5'));
     //Total Score
     console.log( "Total Score equal" + totalScore);
 
