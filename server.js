@@ -18,7 +18,12 @@ app.post('/', function(req, res) {
     var totalScore = firstScore + secondScore + thridScore + fourthScore + fifthScore;
     
     // jsonResponse.push({ "text": "Hi. " + (Math.random() * 5 + 1).toFixed(0) + " is a lucky number..." });
-    res.json({ "result": totalScore });
+    res.json({ 
+                "set_attributes":
+                {
+                    "result": totalScore 
+                }
+            });
     //res.send(jsonResponse);
 });
 
