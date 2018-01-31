@@ -6,7 +6,7 @@ http.listen(process.env.PORT || 3000, function() {
     console.log('listening on', http.address().port);
 });
 
-app.post('/', function(req, res) {
+app.get('/', function(req, res) {
     var jsonResponse = [];
     var user_fb_id = req.param('fb_id');
     var firstScore = req.param('attribute1');
