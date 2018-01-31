@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
     var fourthScore = req.param('attribute4');
     var fifthScore = req.param('attribute5');
     //Total Score
-
+    console.log( firstScore);
 
     var totalScore = firstScore + secondScore + thridScore + fourthScore + fifthScore;
     
