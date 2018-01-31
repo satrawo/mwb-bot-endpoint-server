@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
     var fourthScore = req.param('attribute4');
     var fifthScore = req.param('attribute5');
     //Total Score
-    console.log( firstScore);
+    console.log( "Total Score equal" + totalScore);
 
     var totalScore = firstScore + secondScore + thridScore + fourthScore + fifthScore;
     
@@ -23,7 +23,7 @@ app.get('/', function(req, res) {
     res.json({ 
                 "set_attributes":
                 {
-                    "result": fifthScore
+                    "result": totalScore
                 }
             });
     //res.send(jsonResponse);
